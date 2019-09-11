@@ -2,7 +2,7 @@ import React from 'react';
 import { MainStore } from '../context/mainContext';
 import Nav from './nav';
 import Footer from './footer';
-import Ring from '../images/ring.png';
+import Ring from '../images/main-ring.png';
 import Waves from '../images/top-waves.svg';
 import Setting from '../images/setting.jpg';
 import Design from '../images/design.jpg';
