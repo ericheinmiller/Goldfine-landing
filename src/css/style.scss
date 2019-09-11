@@ -49,6 +49,7 @@
   position: fixed;
   background-color: transparent;
   display: flex;
+  z-index: 10;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +58,7 @@
   .waves {
     position: absolute;
   }
-  .links {
+  .links-container {
     padding-right: 15%;
     width: 200px;
     display: flex;
@@ -65,17 +66,23 @@
     justify-content: space-around;
     align-items: center;
   }
-  .links a {
+  .links {
+    cursor: pointer;
     font-family: 'Open Sans';
     color: #FFFFFF;
     font-size: 12px;
     line-height: 24px;
-  }
-  .links a:first-child {
+    border-bottom: 2px solid transparent;
     color: white;
-    font-weight: bold;
+    transition: border 0.3s, font-weight 0.3s;
+  }
+  .links:hover {
+    font-weight: bolder;
     border-bottom: 2px solid white;
-    font-weight: bold;
+  }
+  .links:first-child {
+    font-weight: bolder;
+    border-bottom: 2px solid white;
   }
   .logo {
     padding-left: 10%;
@@ -318,12 +325,14 @@
 .designs {
   display: flex;
   flex-direction: row;
-  border-radius: 2px;
   align-items: center;
   justify-content: space-around;
   margin-top: 400px;
   color: white;
   position: relative;
+  img {
+    border-radius: 2px;
+  }
   &__title {
     font-size: 30px;
     font-family: MyFont;

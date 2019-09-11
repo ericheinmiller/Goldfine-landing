@@ -18,13 +18,17 @@ export default () => {
     return () => { window.addEventListener('scroll', handleScroll); };
   }, []);
 
+  const handleMouseEnter = (location) => {
+    console.log(location);
+  };
+
   return (
     <div className={`nav ${backgroundColor}`}>
       <img className="logo" src={Goldfine} alt="Goldfine Logo" />
-      <div className="links">
-        <a>Home</a>
-        <a>Blog</a>
-        <a>Investor Relations</a>
+      <div className="links-container">
+        <a className="links" onMouseEnter={() => handleMouseEnter('home')}>Home</a>
+        <a className="links" onMouseEnter={() => handleMouseEnter('blog')}>Blog</a>
+        <a className="links" onMouseEnter={() => handleMouseEnter('invest')}>Investor Relations</a>
       </div>
     </div>
   );
